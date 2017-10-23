@@ -3,16 +3,16 @@ var img;
 //var state=1
 
  
-//
-//var circX=1020;
-//var circY=800;
-//var circSize=109;
-//var circTop=circY;
-//var circBottom=circY+circSize;
-//var circLeft=circX;
-//var circRight=circX=circSize;
-//var colR;
-//
+
+var circX=573.5;
+var circY=576.5;
+var circSize=109;
+var circTop=circY;
+var circBottom=circY+circSize;
+var circLeft=circX;
+var circRight=circX=circSize;
+var colR;
+
 
 
 function preload (){
@@ -24,7 +24,7 @@ function preload (){
 
 function setup(){
     
-createCanvas(windowWidth,windowHeight);  
+createCanvas(1366,762);  
     
 }
 
@@ -52,32 +52,38 @@ function draw() {
 //    circ(circX,circY,circSize,circSize);
 //    
 //    
-    circle 1
+//    circle 1
   
-    
-circ1(920,804.5,109,109);
-    fill(255)
+    fill(255);
+    noStroke();
+    ellipse(597,578,109,109);
+
 
 //    ellipse.mouseover fill(0);
     
 //    circle 2
 
-    ellipse(895.5,625,109,109);
-    fill(255)
+    ellipse(574,398,109,109);
 
 //      circle 3
     
-     ellipse(1080,580.5,109,109);
-    fill(255)
+     ellipse(755,357,109,109);
     
     
 //    circle 4
     
-      ellipse(1150,758,109,109);
-      fill(255)
+      ellipse(825,532,109,109);
+    
+// if (state) {
+//  fill(0,0,0); 
+//  ellipse(1150,758,109,109);
+// }else {
+//  noFill();
+//  ellipse(1150,758,109,109);
+// }    
 
   
-    noStroke();
+
 //    
 //    if(state==1){
 //    fill(255,10,30,50);
