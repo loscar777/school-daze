@@ -39,6 +39,9 @@ var circ4Radius=circ4Size / 2;
 var d4;
 
 var white=0;
+var blueCirc=0;
+var yellowCirc=0;
+var greenCirc=0;
 
 var beat1;
 var beat2;
@@ -109,6 +112,7 @@ function draw() {
      
 //    ellipse(574,398,109,109);
     
+     fill(blueCirc);
     ellipse(circ2X,circ2Y,circ2Size,circ2Size);
     d2 = dist(circ2X, circ2Y, mouseX, mouseY);
 
@@ -116,6 +120,8 @@ function draw() {
     
 //     ellipse(755,357,109,109);
 //    
+     fill(yellowCirc);
+    
     ellipse(circ3X,circ3Y, circ3Size,circ3Size);
      d3 = dist(circ3X, circ3Y, mouseX, mouseY);
     
@@ -123,14 +129,33 @@ function draw() {
 //    circle 4
 ////    
 //      ellipse(825,532,109,109);
-   
+     fill(greenCirc);
      ellipse(circ4X,circ4Y,circ4Size,circ4Size);
      d4 = dist(circ4X, circ4Y, mouseX, mouseY);
 //    
-    if (d1 < circ1Radius || d2 < circ2Radius || d3 < circ3Radius || d4 < circ4Radius) {
+    if (d1 < circ1Radius) {
         white = 255; 
     }else {
         white = 0;
+    }  
+    
+     if (d2 < circ2Radius) {
+        blueCirc = color(0,0, 250);
+    }else {
+        blueCirc = 0;
+    }  
+    
+     if (d3 < circ3Radius) {
+       yellowCirc = color(255, 204, 0); 
+    }else {
+        yellowCirc = 0;
+    }  
+    
+     if (d4 < circ4Radius) {
+       greenCirc = color(0,250,10); 
+    
+    }else {
+       greenCirc= 0;
     }  
 //    
 // if (state) {
@@ -164,7 +189,7 @@ function draw() {
 //
 function mousePressed(){
     
-    if(d1 > circ1Radius && isClicked == false) {
+    if(d1< circ1Radius && isClicked == false) {
         beat1.play();
         isClicked = !isClicked;
     }else if(d1 > circ1Radius && isClicked == true) {
@@ -172,7 +197,7 @@ function mousePressed(){
         isClicked = !isClicked;
     }
     
-    if(d2 > circ2Radius && isClicked2 == false) {
+    if(d2< circ2Radius && isClicked2 == false) {
         beat2.play();
         isClicked2 = !isClicked2;
     }else if(d2 > circ2Radius && isClicked == true) {
@@ -180,7 +205,7 @@ function mousePressed(){
         isClicked2 = !isClicked2;
     }
 //    
-   if(d3 > circ3Radius && isClicked == false) {
+   if(d3< circ3Radius && isClicked == false) {
         beat3.play();
         isClicked3 = !isClicked3;
     }else if(d3 > circ3Radius && isClicked == true) {
