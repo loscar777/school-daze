@@ -7,6 +7,8 @@ var myFont;
 var words =["","1","2","5","0","0","0","0",""];
 var words2 =["","","1","8","6","5","","",""];
 var words3 =[" "," S","L","A","V","E","R","Y "," "];
+var words4=["","","2","0","1","6","","",""];
+
 
 var rectX = 100;
 var rectY = 800;
@@ -42,50 +44,7 @@ function draw (){
     fill(colR,255,255);
         rect(rectX, rectY, rectSize, rectSize);
 //    Text
-    
-    
-////    page 1  
-//    for(var i=0; i<words.length;i++){
-//        fill(255);
-//        ellipse(x+ increment*i, y, circSize,circSize);
-//        textAlign(CENTER,CENTER);
-//        fill(255, 0, 0);
-//        text(words[i],x+increment*i,y);
-////        text(i+1,x+ increment*i,y);
-////        text(words[index],300,575);
-////        text("",x,y,w,h);
-////        
-//    }
-    
-//    //    page 2
-//    for(var i=0; i<words2.length;i++){
-//        fill(255);
-//        ellipse(x+ increment*i, y, circSize,circSize);
-//        textAlign(CENTER,CENTER);
-//        fill(255, 0, 0);
-//        text(words2[i],x+increment*i,y);
-////        text(i+1,x+ increment*i,y);
-////        text(words[index],300,575);
-////        text("",x,y,w,h);
-////        
-//    }
-//    
-    //    page 3
-//    for(var i=0; i<words3.length;i++){
-//        fill(255);
-//        ellipse(x+ increment*i, y, circSize,circSize);
-//        textAlign(CENTER,CENTER);
-//        fill(255, 0, 0);
-//        text(words3[i],x+increment*i,y);
-////        text(i+1,x+ increment*i,y);
-////        text(words[index],300,575);
-////        text("",x,y,w,h);
-////        
-//        
-//        fill(colR, 255, 255);
-//        rect(rectX, rectY, rectSize, rectSize);
-//
-//    }
+}
     
    if(state == 1){
           //page 1
@@ -100,7 +59,8 @@ function draw (){
 //        text("",x,y,w,h);
 //        
     }
-   } if(state == 2){
+   } 
+     if(state == 2){
          //    page 2
     for(var i=0; i<words2.length;i++){
         fill(255);
@@ -113,7 +73,8 @@ function draw (){
 //        text("",x,y,w,h);
  }
  
-     } if(state == 3){
+     } 
+       if(state == 3){
          for(var i=0; i<words3.length;i++){
         fill(255);
         ellipse(x+ increment*i, y, circSize,circSize);
@@ -124,11 +85,38 @@ function draw (){
 //        text(words[index],300,575);
 //        text("",x,y,w,h);
        
-        }
-      // fill(0, 50);
-       // ellipse(mouseX, mouseY, 40, 40);
+       
+     
     }
 
+    } if(state == 4){
+         for(var i=0; i<words4.length;i++){
+        fill(255);
+        ellipse(x+ increment*i, y, circSize,circSize);
+        textAlign(CENTER,CENTER);
+        fill(255, 0, 0);
+        text(words4[i],x+increment*i,y);
+//        text(i+1,x+ increment*i,y);
+//        text(words[index],300,575);
+//        text("",x,y,w,h);
+       
+        }
+    }
+    
+      if(state == 5){
+         for(var i=0; i<words5.length;i++){
+        fill(255);
+        ellipse(x+ increment*i, y, circSize,circSize);
+        textAlign(CENTER,CENTER);
+        fill(255, 0, 0);
+        text(words5[i],x+increment*i,y);
+//        text(i+1,x+ increment*i,y);
+//        text(words[index],300,575);
+//        text("",x,y,w,h);
+       
+        }
+     }
+    
 /*Page 1*/
 
 //    for(var i=0; i<8;i++){
@@ -187,16 +175,18 @@ function draw (){
 //    ellipse(x+ increment*6,y,circSize,circSize);
 //    
 ////for (var x=366;x< 253;x+=355);
-}
+//}
     
 
 function mousePressed(){
     if(mouseX > rectLeft && mouseX < rectRight && mouseY > rectTop && mouseY < rectBottom){
-        if(state < 3){
+        if(state < 6){
             state = state +1;
         }else{
             state = 1;
 
         }
-    }
+    
 }
+}
+
