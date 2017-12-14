@@ -8,6 +8,7 @@ var words =["","1","2","5","0","0","0","0",""];
 var words2 =["","","1","8","6","5","","",""];
 var words3 =[" "," S","L","A","V","E","R","Y "," "];
 var words4=["","","2","0","1","6","","",""];
+var words5=["","4","0","0","0","0","0","0","0"];
 
 
 var rectX = 100;
@@ -20,12 +21,16 @@ var rectRight = rectX + rectSize;
 var colR = 255;
 var buttonClicked = false;
 
+
+
 var state = 1;
 
-
+ 
 
 function preload(){
     myFont=loadFont("Roboto-Black.ttf");
+//    
+//    sound=loadSound()
 }
 
 function setup(){
@@ -43,8 +48,10 @@ function draw (){
     
     fill(colR,255,255);
         rect(rectX, rectY, rectSize, rectSize);
-//    Text
-}
+    textSize(40);
+    fill(0);
+    text("Click",150,850);
+
     
    if(state == 1){
           //page 1
@@ -88,8 +95,9 @@ function draw (){
        
      
     }
+       }
 
-    } if(state == 4){
+     if(state == 4){
          for(var i=0; i<words4.length;i++){
         fill(255);
         ellipse(x+ increment*i, y, circSize,circSize);
@@ -177,16 +185,15 @@ function draw (){
 ////for (var x=366;x< 253;x+=355);
 //}
     
-
+       }
 function mousePressed(){
     if(mouseX > rectLeft && mouseX < rectRight && mouseY > rectTop && mouseY < rectBottom){
-        if(state < 6){
+        if(state <6){
             state = state +1;
         }else{
             state = 1;
 
         }
-    
 }
 }
 
