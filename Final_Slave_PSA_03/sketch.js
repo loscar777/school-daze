@@ -77,11 +77,13 @@ function draw (){
    } 
      if(state == 2){
          //    page 2
+         text("SLAVERY",900,250);
+        text("ABOLISHED",1000,800);
+         
     for(var i=0; i<words2.length;i++){
         fill(255);
         ellipse(x+ increment*i, y, circSize,circSize);
-        text("SLAVERY",900,250);
-        text("ABOLISHED",1000,800);
+       
         
         textAlign(CENTER,CENTER);
         fill(255, 0, 0);
@@ -95,12 +97,15 @@ function draw (){
  
      } 
        if(state == 3){
+        text("MORE PEOPLE",900,250);
+        text("ARE ENSLAVED",1000,800); 
+           
          for(var i=0; i<words3.length;i++){
+                 
         fill(255);
         ellipse(x+ increment*i, y, circSize,circSize);
              
-        text("TIME",900,250);
-        text("FINISH",1000,800);
+       
              
              
         textAlign(CENTER,CENTER);
@@ -116,6 +121,9 @@ function draw (){
        }
 
      if(state == 4){
+        text("TIME",900,250);
+        text("FINISH",1000,800); 
+         
          for(var i=0; i<words4.length;i++){
         fill(255);
         ellipse(x+ increment*i, y, circSize,circSize);
